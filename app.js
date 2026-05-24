@@ -10,6 +10,7 @@
   const submitButton = document.querySelector("[data-submit]");
   const message = document.querySelector("[data-message]");
   const tokenStatus = document.querySelector("[data-token-status]");
+  const passwordToggles = document.querySelectorAll("[data-password-toggle]");
 
   const setMessage = (text, type) => {
     message.textContent = text;
@@ -30,6 +31,25 @@
       return "Something went wrong. Please try again.";
     }
   };
+
+  passwordToggles.forEach((toggle) => {
+    const input = document.getElementById(toggle.dataset.passwordToggle);
+
+    if (!input) {
+      return;
+    }
+
+    toggle.addEventListener("click", () => {
+      const shouldShow = input.type === "password";
+      input.type = shouldShow ? "text" : "password";
+      toggle.setAttribute("aria-pressed", String(shouldShow));
+      toggle.setAttribute(
+        "aria-label",
+        `${shouldShow ? "Hide" : "Show"} ${input.labels[0].textContent.toLowerCase()}`
+      );
+      input.focus();
+    });
+  });
 
   if (!token) {
     form.hidden = true;
