@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#3b2414">
+    <title>Mukadma Password Reset</title>
+    <link rel="icon" href="../assets/favicon.png">
+    <link rel="stylesheet" href="../styles.css">
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="reset-panel" aria-labelledby="page-title">
+        <img class="brand-logo" src="../assets/mukoddoma_logo_en_whitebg.svg" alt="Mukadma">
+        <div class="lock-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" role="img">
+            <path d="M7 10V8a5 5 0 0 1 10 0v2h1.25A1.75 1.75 0 0 1 20 11.75v7.5A1.75 1.75 0 0 1 18.25 21H5.75A1.75 1.75 0 0 1 4 19.25v-7.5A1.75 1.75 0 0 1 5.75 10H7Zm2 0h6V8a3 3 0 1 0-6 0v2Zm3 3.75a1.25 1.25 0 0 0-.75 2.25v1.5a.75.75 0 0 0 1.5 0V16A1.25 1.25 0 0 0 12 13.75Z"/>
+          </svg>
+        </div>
+        <h1 id="page-title">Reset Password</h1>
+        <p class="status-text" data-token-status></p>
+
+        <form class="reset-form" data-reset-form>
+          <label for="new-password">New password</label>
+          <input id="new-password" name="new-password" type="password" autocomplete="new-password" minlength="6" required>
+
+          <label for="confirm-password">Confirm new password</label>
+          <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="6" required>
+
+          <button type="submit" data-submit>Reset password</button>
+          <p class="form-message" data-message hidden></p>
+        </form>
+      </section>
+    </main>
+    <script src="../config.js"></script>
+    <script src="../app.js"></script>
+  </body>
+</html>
