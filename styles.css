@@ -113,6 +113,14 @@ input:focus {
   box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.14);
 }
 
+input[data-validity="valid"] {
+  border-color: var(--success);
+}
+
+input[data-validity="invalid"] {
+  border-color: var(--error);
+}
+
 .password-field {
   position: relative;
   display: grid;
@@ -162,6 +170,100 @@ input:focus {
 
 .password-toggle[aria-pressed="true"] .icon-eye-off {
   display: block;
+}
+
+.password-feedback {
+  margin: -2px 0 6px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--surface);
+}
+
+.password-strength-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 0.84rem;
+}
+
+.password-strength-header strong {
+  color: var(--primary);
+}
+
+.password-strength-track {
+  height: 6px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--surface-warm);
+}
+
+.password-strength-fill {
+  width: 0;
+  height: 100%;
+  border-radius: inherit;
+  background: var(--error);
+  transition: width 180ms ease, background-color 180ms ease;
+}
+
+.password-strength-fill[data-strength="fair"] {
+  background: #b7791f;
+}
+
+.password-strength-fill[data-strength="good"],
+.password-strength-fill[data-strength="strong"] {
+  background: var(--success);
+}
+
+.password-checklist-hint {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.password-check-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 24px;
+  color: var(--muted);
+  font-size: 0.86rem;
+}
+
+.password-check-row[data-validity="valid"] {
+  color: var(--success);
+}
+
+.password-check-row[data-validity="invalid"] {
+  color: var(--error);
+}
+
+.password-check-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+  font-size: 0.7rem;
+  line-height: 1;
+}
+
+.password-check-icon::before {
+  content: "";
+}
+
+.password-check-row[data-validity="valid"] .password-check-icon::before {
+  content: "✓";
+}
+
+.password-check-row[data-validity="invalid"] .password-check-icon::before {
+  content: "×";
 }
 
 button {

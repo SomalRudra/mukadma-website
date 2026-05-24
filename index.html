@@ -23,7 +23,7 @@
         <form class="reset-form" data-reset-form>
           <label for="new-password">New password</label>
           <div class="password-field">
-            <input id="new-password" name="new-password" type="password" autocomplete="new-password" minlength="6" required>
+            <input id="new-password" name="new-password" type="password" autocomplete="new-password" minlength="8" required>
             <button class="password-toggle" type="button" aria-label="Show new password" aria-pressed="false" data-password-toggle="new-password">
               <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 5c4.6 0 8.4 3.1 10 7-1.6 3.9-5.4 7-10 7S3.6 15.9 2 12c1.6-3.9 5.4-7 10-7Zm0 2c-3.2 0-6 1.9-7.7 5 1.7 3.1 4.5 5 7.7 5s6-1.9 7.7-5C18 8.9 15.2 7 12 7Zm0 2.25A2.75 2.75 0 1 1 12 14.75 2.75 2.75 0 0 1 12 9.25Zm0 1.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
@@ -33,10 +33,36 @@
               </svg>
             </button>
           </div>
+          <div class="password-feedback" data-password-feedback hidden>
+            <div class="password-strength-header">
+              <span>Password strength</span>
+              <strong data-password-strength>Start typing</strong>
+            </div>
+            <div class="password-strength-track" aria-hidden="true">
+              <div class="password-strength-fill" data-password-strength-fill></div>
+            </div>
+            <p class="password-checklist-hint">Green means your password has:</p>
+            <div class="password-check-row" data-password-check="length">
+              <span class="password-check-icon" aria-hidden="true"></span>
+              <span>At least 8 characters</span>
+            </div>
+            <div class="password-check-row" data-password-check="letter">
+              <span class="password-check-icon" aria-hidden="true"></span>
+              <span>Contains a letter</span>
+            </div>
+            <div class="password-check-row" data-password-check="number">
+              <span class="password-check-icon" aria-hidden="true"></span>
+              <span>Contains a number</span>
+            </div>
+            <div class="password-check-row" data-password-check="special">
+              <span class="password-check-icon" aria-hidden="true"></span>
+              <span>Contains a special character</span>
+            </div>
+          </div>
 
           <label for="confirm-password">Confirm new password</label>
           <div class="password-field">
-            <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="6" required>
+            <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="8" required>
             <button class="password-toggle" type="button" aria-label="Show confirmed password" aria-pressed="false" data-password-toggle="confirm-password">
               <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
                 <path d="M12 5c4.6 0 8.4 3.1 10 7-1.6 3.9-5.4 7-10 7S3.6 15.9 2 12c1.6-3.9 5.4-7 10-7Zm0 2c-3.2 0-6 1.9-7.7 5 1.7 3.1 4.5 5 7.7 5s6-1.9 7.7-5C18 8.9 15.2 7 12 7Zm0 2.25A2.75 2.75 0 1 1 12 14.75 2.75 2.75 0 0 1 12 9.25Zm0 1.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
