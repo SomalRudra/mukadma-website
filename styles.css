@@ -157,46 +157,6 @@ a {
   isolation: isolate;
 }
 
-.component-hero {
-  position: relative;
-  min-height: 620px;
-  display: grid;
-  place-items: center;
-  isolation: isolate;
-}
-
-.component-hero::before {
-  content: "";
-  position: absolute;
-  width: min(530px, 88vw);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background:
-    conic-gradient(from 120deg, rgba(0, 106, 78, 0.24), rgba(244, 42, 65, 0.18), rgba(183, 121, 31, 0.12), rgba(0, 106, 78, 0.24));
-  filter: blur(1px);
-  animation: slow-spin 22s linear infinite;
-  z-index: -2;
-}
-
-.component-hero::after {
-  content: "";
-  position: absolute;
-  width: min(450px, 74vw);
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 253, 249, 0.96), rgba(237, 245, 241, 0.84) 64%, transparent 70%);
-  z-index: -1;
-}
-
-.component-hero img {
-  width: min(530px, 100%);
-  max-height: min(690px, 76vh);
-  display: block;
-  object-fit: contain;
-  filter: drop-shadow(0 28px 58px rgba(59, 36, 20, 0.18));
-  animation: phone-float 5.2s ease-in-out infinite;
-}
-
 .human-hero::before {
   content: "";
   position: absolute;
@@ -296,6 +256,13 @@ a {
   font-size: 1.08rem;
 }
 
+.bd-flag-card img {
+  width: 86px;
+  height: auto;
+  display: block;
+  box-shadow: 0 12px 28px rgba(0, 106, 78, 0.18);
+}
+
 .local-phone {
   transform-origin: center;
 }
@@ -389,7 +356,7 @@ a {
   box-shadow: 0 22px 48px rgba(15, 118, 110, 0.12);
 }
 
-.instant-card span {
+.instant-card > span {
   width: 46px;
   height: 46px;
   display: grid;
@@ -452,7 +419,7 @@ a {
   margin-top: 28px;
 }
 
-.case-chips span {
+.case-chips > span {
   min-height: 42px;
   display: inline-flex;
   align-items: center;
@@ -465,22 +432,22 @@ a {
   animation: chip-bob 4s ease-in-out infinite;
 }
 
-.case-chips .is-live {
+.case-chips > .is-live {
   background: #006a4e;
   color: #ffffff;
 }
 
-.case-chips .is-soon {
+.case-chips > .is-soon {
   border-style: dashed;
   background: rgba(255, 253, 249, 0.72);
   color: #7c6856;
 }
 
-.case-chips span:nth-child(2n) {
+.case-chips > span:nth-child(2n) {
   animation-delay: 600ms;
 }
 
-.case-chips span:nth-child(3n) {
+.case-chips > span:nth-child(3n) {
   animation-delay: 1200ms;
 }
 
@@ -601,8 +568,8 @@ a {
   margin-top: 20px;
 }
 
-.launch-badges span,
-.store-row span {
+.launch-badges > span,
+.store-row > span {
   min-height: 38px;
   display: inline-flex;
   align-items: center;
@@ -781,7 +748,7 @@ a {
   grid-template-columns: minmax(0, 0.72fr) minmax(0, 1.28fr);
   gap: 28px;
   align-items: stretch;
-  padding: 28px 132px 28px 28px;
+  padding: 28px;
   border: 1px solid rgba(216, 198, 181, 0.9);
   border-radius: 8px;
   background: var(--surface);
@@ -791,212 +758,6 @@ a {
 .proof-strip h2 {
   font-size: 2.05rem;
   line-height: 1.08;
-}
-
-.lawyer-character {
-  --suit: #24130b;
-  --lapel: #3b2414;
-  --skin: #c98254;
-  --hair: #20140e;
-  --shirt: #fff8ef;
-  --tie: #0f766e;
-  position: absolute;
-  right: 26px;
-  bottom: 16px;
-  width: 84px;
-  height: 126px;
-  pointer-events: none;
-  transform-origin: 50% 100%;
-  animation: lawyer-bob 4.6s ease-in-out infinite;
-  z-index: 1;
-}
-
-.lawyer-character::before {
-  content: "";
-  position: absolute;
-  left: 14px;
-  right: 14px;
-  bottom: -7px;
-  height: 12px;
-  border-radius: 50%;
-  background: rgba(59, 36, 20, 0.16);
-  filter: blur(3px);
-}
-
-.lawyer-head,
-.lawyer-body,
-.lawyer-arm,
-.lawyer-face,
-.lawyer-shirt,
-.lawyer-tie {
-  position: absolute;
-  display: block;
-}
-
-.lawyer-head {
-  left: 21px;
-  top: 5px;
-  width: 42px;
-  height: 48px;
-  border-radius: 48% 48% 44% 44%;
-  background: var(--skin);
-  box-shadow: inset 0 -4px 0 rgba(59, 36, 20, 0.08);
-  animation: lawyer-nod 5.2s ease-in-out infinite;
-}
-
-.lawyer-head::before {
-  content: "";
-  position: absolute;
-  inset: -7px -4px 28px;
-  border-radius: 18px 18px 12px 12px;
-  background: var(--hair);
-}
-
-.lawyer-face {
-  inset: 14px 8px 7px;
-}
-
-.lawyer-eye {
-  position: absolute;
-  top: 6px;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background: #24130b;
-  animation: lawyer-blink 4.2s ease-in-out infinite;
-}
-
-.lawyer-eye.left {
-  left: 4px;
-}
-
-.lawyer-eye.right {
-  right: 4px;
-}
-
-.lawyer-smile {
-  position: absolute;
-  left: 50%;
-  bottom: 4px;
-  width: 15px;
-  height: 8px;
-  border-bottom: 2px solid rgba(36, 19, 11, 0.72);
-  border-radius: 0 0 999px 999px;
-  transform: translateX(-50%);
-}
-
-.lawyer-body {
-  left: 10px;
-  bottom: 0;
-  width: 64px;
-  height: 76px;
-  border-radius: 26px 26px 10px 10px;
-  background:
-    linear-gradient(115deg, transparent 0 38%, rgba(255, 255, 255, 0.08) 38% 40%, transparent 40%),
-    var(--suit);
-  overflow: hidden;
-}
-
-.lawyer-body::before,
-.lawyer-body::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 30px;
-  height: 58px;
-  background: var(--lapel);
-  clip-path: polygon(0 0, 100% 0, 52% 100%);
-}
-
-.lawyer-body::before {
-  left: 0;
-}
-
-.lawyer-body::after {
-  right: 0;
-  transform: scaleX(-1);
-}
-
-.lawyer-shirt {
-  left: 24px;
-  top: 0;
-  width: 16px;
-  height: 62px;
-  background: var(--shirt);
-  clip-path: polygon(50% 0, 100% 24%, 78% 100%, 22% 100%, 0 24%);
-  z-index: 1;
-}
-
-.lawyer-tie {
-  left: 29px;
-  top: 14px;
-  width: 6px;
-  height: 36px;
-  background: var(--tie);
-  clip-path: polygon(50% 0, 100% 12%, 78% 100%, 50% 100%, 22% 100%, 0 12%);
-  z-index: 2;
-  animation: tie-sway 3.8s ease-in-out infinite;
-}
-
-.lawyer-arm {
-  right: 4px;
-  top: 64px;
-  width: 13px;
-  height: 46px;
-  border-radius: 999px;
-  background: var(--suit);
-  transform-origin: 50% 8px;
-  animation: lawyer-wave 3.2s ease-in-out infinite;
-}
-
-.lawyer-arm::after {
-  content: "";
-  position: absolute;
-  left: -2px;
-  bottom: -7px;
-  width: 17px;
-  height: 17px;
-  border-radius: 50%;
-  background: var(--skin);
-}
-
-.lawyer-light {
-  --suit: #fff8ef;
-  --lapel: #d8c6b5;
-  --shirt: #ffffff;
-  --tie: #f42a41;
-  filter: drop-shadow(0 18px 22px rgba(0, 0, 0, 0.2));
-}
-
-.lawyer-b {
-  right: 18px;
-  bottom: 18px;
-  animation-delay: 300ms;
-}
-
-.lawyer-c {
-  right: max(24px, calc((100% - 1120px) / 2 + 18px));
-  bottom: 34px;
-  animation-delay: 600ms;
-}
-
-.lawyer-d {
-  right: 18px;
-  bottom: 26px;
-  animation-delay: 900ms;
-}
-
-.lawyer-e {
-  right: 50%;
-  bottom: 18px;
-  transform: translateX(50%);
-  animation-name: lawyer-center-bob;
-}
-
-.lawyer-f {
-  right: 22px;
-  bottom: 20px;
-  animation-delay: 1200ms;
 }
 
 .proof-grid {
@@ -1018,18 +779,6 @@ a {
 .launch-section,
 .source-section {
   padding: 86px 0;
-}
-
-.instant-section,
-.section-band,
-.comparison-section,
-.case-cloud,
-.launch-section {
-  padding-bottom: 150px;
-}
-
-.launch-bd {
-  padding: 36px 36px 150px;
 }
 
 .section-heading {
@@ -1267,7 +1016,7 @@ a {
   transform: translateX(8px);
 }
 
-.launch-timeline span {
+.launch-timeline div > span {
   position: absolute;
   left: 16px;
   top: 18px;
@@ -1433,9 +1182,9 @@ body:not(.reset-page) .launch-timeline strong {
 body:not(.reset-page) .instant-card p,
 body:not(.reset-page) .service-card p,
 body:not(.reset-page) .proof-grid span,
-body:not(.reset-page) .case-chips span,
+body:not(.reset-page) .case-chips > span,
 body:not(.reset-page) .comparison-row span,
-body:not(.reset-page) .store-row span,
+body:not(.reset-page) .store-row > span,
 body:not(.reset-page) .site-footer,
 body:not(.reset-page) .language-toggle {
   font-size: 0.8rem;
@@ -1511,66 +1260,6 @@ body:not(.reset-page) .language-toggle {
   }
   50% {
     transform: translateY(-10px) scale(1.01);
-  }
-}
-
-@keyframes lawyer-bob {
-  0%, 100% {
-    transform: translateY(0) rotate(-1deg);
-  }
-  50% {
-    transform: translateY(-9px) rotate(1deg);
-  }
-}
-
-@keyframes lawyer-center-bob {
-  0%, 100% {
-    transform: translateX(50%) translateY(0) rotate(-1deg);
-  }
-  50% {
-    transform: translateX(50%) translateY(-9px) rotate(1deg);
-  }
-}
-
-@keyframes lawyer-nod {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  45% {
-    transform: rotate(-3deg);
-  }
-  70% {
-    transform: rotate(2deg);
-  }
-}
-
-@keyframes lawyer-blink {
-  0%, 88%, 100% {
-    transform: scaleY(1);
-  }
-  92% {
-    transform: scaleY(0.12);
-  }
-}
-
-@keyframes lawyer-wave {
-  0%, 100% {
-    transform: rotate(7deg);
-  }
-  42% {
-    transform: rotate(-24deg);
-  }
-  68% {
-    transform: rotate(12deg);
-  }
-}
-
-@keyframes tie-sway {
-  0%, 100% {
-    transform: rotate(0deg);
-  }
-  50% {
-    transform: rotate(5deg);
   }
 }
 
@@ -1896,22 +1585,12 @@ button:disabled {
   }
 
   .bd-motion-stage,
-  .phone-stage,
-  .component-hero {
+  .phone-stage {
     min-height: 590px;
-  }
-
-  .component-hero img {
-    width: min(470px, 100%);
-    max-height: 640px;
   }
 
   .bd-hero h1 {
     font-size: 4.2rem;
-  }
-
-  .proof-strip {
-    padding: 28px 28px 150px;
   }
 }
 
@@ -1987,9 +1666,8 @@ button:disabled {
   }
 
   .bd-motion-stage,
-  .phone-stage,
-  .component-hero {
-    min-height: 520px;
+  .phone-stage {
+    min-height: 670px;
   }
 
   .bd-motion-stage::before {
@@ -2018,19 +1696,6 @@ button:disabled {
 
   .phone-mockup {
     width: min(292px, 86vw);
-  }
-
-  .component-hero::before {
-    width: min(340px, 84vw);
-  }
-
-  .component-hero::after {
-    width: min(292px, 72vw);
-  }
-
-  .component-hero img {
-    width: min(360px, 100%);
-    max-height: none;
   }
 
   .signal-card {
@@ -2088,26 +1753,12 @@ button:disabled {
     padding: 24px 14px;
   }
 
-  .lawyer-character,
-  .lawyer-b,
-  .lawyer-c,
-  .lawyer-d,
-  .lawyer-e,
-  .lawyer-f {
-    position: relative;
-    right: auto;
-    bottom: auto;
-    margin: 26px auto 0;
-    transform: none;
-    animation-name: lawyer-bob;
-  }
-
   .launch-timeline div {
     min-height: 74px;
     padding: 16px 14px 16px 64px;
   }
 
-  .launch-timeline span {
+  .launch-timeline div > span {
     left: 14px;
     top: 16px;
     width: 36px;
