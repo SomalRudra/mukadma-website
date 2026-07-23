@@ -1211,72 +1211,23 @@ a {
   padding: clamp(22px, 4vw, 36px);
 }
 
-.contact-form {
+.contact-direct {
   display: grid;
-  gap: 14px;
+  gap: 18px;
 }
 
-.form-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 14px;
-}
-
-.form-field {
-  display: grid;
-  gap: 7px;
-}
-
-.form-field.full {
-  grid-column: 1 / -1;
-}
-
-.form-field input,
-.form-field select,
-.form-field textarea {
-  width: 100%;
-  min-height: 50px;
-  border: 1px solid var(--border);
+.email-display {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(15, 118, 110, 0.28);
   border-radius: 8px;
-  background: var(--surface);
-  color: var(--text);
-  font: inherit;
-  padding: 0 14px;
-  outline: none;
-}
-
-.form-field textarea {
-  min-height: 150px;
-  padding-block: 12px;
-  resize: vertical;
-}
-
-.form-field input:focus,
-.form-field select:focus,
-.form-field textarea:focus {
-  border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(15, 118, 110, 0.14);
-}
-
-.honeypot {
-  position: absolute;
-  left: -9999px;
-  opacity: 0;
-}
-
-.form-note,
-.form-status {
-  color: #6f5a48;
-  font-size: 0.9rem;
-  line-height: 1.55;
-}
-
-.form-status[data-type="error"] {
-  color: var(--error);
-}
-
-.form-status[data-type="success"] {
-  color: var(--success);
+  background: rgba(223, 249, 244, 0.72);
+  color: var(--accent-strong);
+  font-size: clamp(1.05rem, 2vw, 1.35rem);
+  font-weight: 900;
+  padding: 14px 16px;
+  overflow-wrap: anywhere;
 }
 
 .contact-actions {
@@ -1286,7 +1237,6 @@ a {
   align-items: center;
 }
 
-.contact-actions button,
 .contact-actions a {
   min-height: 50px;
   display: inline-flex;
@@ -1302,17 +1252,6 @@ a {
   border: 1px solid #cfbaaa;
   background: #fffdf9;
   color: var(--primary);
-}
-
-.contact-actions .contact-mail-link-prepared {
-  border-color: rgba(15, 118, 110, 0.42);
-  background: var(--accent);
-  color: #ffffff;
-  box-shadow: 0 14px 30px rgba(15, 118, 110, 0.18);
-}
-
-.contact-actions .contact-mail-link-prepared[hidden] {
-  display: none;
 }
 
 .contact-list {
@@ -2048,8 +1987,7 @@ button:disabled {
     font-size: 2.1rem;
   }
 
-  .contact-layout,
-  .form-grid {
+  .contact-layout {
     grid-template-columns: 1fr;
   }
 
@@ -2058,7 +1996,6 @@ button:disabled {
     flex-direction: column;
   }
 
-  .contact-actions button,
   .contact-actions a {
     width: 100%;
   }
