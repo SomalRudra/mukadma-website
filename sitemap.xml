@@ -8,4 +8,16 @@
     <loc>https://mokoddoma.com/reset-password/</loc>
     <priority>0.3</priority>
   </url>
+  <url>
+    <loc>https://mokoddoma.com/contact/</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://mokoddoma.com/privacy/</loc>
+    <priority>0.4</priority>
+  </url>
+  <url>
+    <loc>https://mokoddoma.com/terms/</loc>
+    <priority>0.4</priority>
+  </url>
 </urlset>
