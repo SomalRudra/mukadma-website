@@ -1304,6 +1304,17 @@ a {
   color: var(--primary);
 }
 
+.contact-actions .contact-mail-link-prepared {
+  border-color: rgba(15, 118, 110, 0.42);
+  background: var(--accent);
+  color: #ffffff;
+  box-shadow: 0 14px 30px rgba(15, 118, 110, 0.18);
+}
+
+.contact-actions .contact-mail-link-prepared[hidden] {
+  display: none;
+}
+
 .contact-list {
   display: grid;
   gap: 14px;

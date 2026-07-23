@@ -74,6 +74,7 @@
 
   if (contactForm) {
     const topicField = contactForm.querySelector("#topic");
+    const preparedMailLink = contactForm.querySelector("[data-prepared-mail]");
     const params = new URLSearchParams(window.location.search);
     const topicOptionLabels = {
       waitlist: {
@@ -147,8 +148,8 @@
         bn: "অযাচিত প্রচারণা, এসইও, ব্যাকলিংক, বিজ্ঞাপন বা লিড-জেনারেশনের প্রস্তাব গ্রহণ করা হয় না। শুধু মোকদ্দমা-সংক্রান্ত প্রয়োজনীয় জিজ্ঞাসা পাঠান।"
       },
       success: {
-        en: "Opening your email app. Please send the prepared email to complete this request.",
-        bn: "আপনার ইমেইল অ্যাপ খুলছে। অনুরোধটি সম্পন্ন করতে প্রস্তুত করা ইমেইলটি পাঠিয়ে দিন।"
+        en: "Your email request is ready. If your email app does not open automatically, use the prepared email button below.",
+        bn: "আপনার ইমেইল অনুরোধ প্রস্তুত। ইমেইল অ্যাপ নিজে থেকে না খুললে নিচের প্রস্তুত ইমেইল বোতামটি চাপুন।"
       }
     };
 
@@ -214,8 +215,15 @@
       ].join("\n");
       const mailto = `mailto:business@mokoddoma.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
 
+      if (preparedMailLink) {
+        preparedMailLink.href = mailto;
+        preparedMailLink.hidden = false;
+      }
+
       setContactStatus("success", "success");
-      window.location.href = mailto;
+      window.setTimeout(() => {
+        preparedMailLink?.click();
+      }, 80);
     });
   }
 
