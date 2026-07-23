@@ -1,7 +1,8 @@
 (function () {
   const languageToggle = document.querySelector("[data-language-toggle]");
-  const savedLanguage = window.localStorage.getItem("mokoddoma-language");
-  const initialLanguage = savedLanguage === "bn" ? "bn" : "en";
+  const languageStorageKey = "mokoddoma-language-v2";
+  const savedLanguage = window.localStorage.getItem(languageStorageKey);
+  const initialLanguage = savedLanguage === "en" ? "en" : "bn";
 
   const setLanguage = (language) => {
     document.body.dataset.lang = language;
@@ -14,7 +15,7 @@
       );
     }
 
-    window.localStorage.setItem("mokoddoma-language", language);
+    window.localStorage.setItem(languageStorageKey, language);
   };
 
   setLanguage(initialLanguage);
@@ -68,9 +69,4 @@
     }, 2600);
   }
 
-  const ticker = document.querySelector(".ticker div");
-
-  if (ticker) {
-    ticker.innerHTML += ticker.innerHTML;
-  }
 })();

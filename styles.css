@@ -317,43 +317,8 @@ a {
   transform: translateY(-50%);
 }
 
-.ticker {
-  width: 100%;
-  overflow: hidden;
-  border-block: 1px solid rgba(216, 198, 181, 0.8);
-  background: #006a4e;
-  color: #ffffff;
-}
-
-.ticker div {
-  width: max-content;
-  display: flex;
-  gap: 32px;
-  padding: 14px 0;
-  animation: ticker-slide 24s linear infinite;
-}
-
-.ticker span {
-  position: relative;
-  font-size: 0.92rem;
-  font-weight: 900;
-  white-space: nowrap;
-}
-
-.ticker span::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  right: -20px;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #f42a41;
-  transform: translateY(-50%);
-}
-
 .local-proof {
-  margin-top: 54px;
+  margin-top: 22px;
 }
 
 .instant-section,
@@ -459,6 +424,17 @@ a {
   animation: chip-bob 4s ease-in-out infinite;
 }
 
+.case-chips .is-live {
+  background: #006a4e;
+  color: #ffffff;
+}
+
+.case-chips .is-soon {
+  border-style: dashed;
+  background: rgba(255, 253, 249, 0.72);
+  color: #7c6856;
+}
+
 .case-chips span:nth-child(2n) {
   animation-delay: 600ms;
 }
@@ -471,7 +447,7 @@ a {
   align-items: center;
   border-top: 0;
   border-radius: 8px;
-  padding: 46px;
+  padding: 36px;
   background:
     linear-gradient(135deg, rgba(216, 243, 238, 0.86), rgba(255, 248, 239, 0.94));
 }
@@ -1020,7 +996,8 @@ a {
 
 .launch-timeline div {
   position: relative;
-  padding: 20px 20px 20px 76px;
+  min-height: 78px;
+  padding: 18px 18px 18px 72px;
   border: 1px solid #dbc9ba;
   border-radius: 8px;
   background: var(--surface);
@@ -1033,10 +1010,10 @@ a {
 
 .launch-timeline span {
   position: absolute;
-  left: 18px;
-  top: 20px;
-  width: 42px;
-  height: 42px;
+  left: 16px;
+  top: 18px;
+  width: 40px;
+  height: 40px;
   display: grid;
   place-items: center;
   border-radius: 8px;
@@ -1140,6 +1117,71 @@ a {
   background: #075a45;
 }
 
+body:not(.reset-page) .site-nav {
+  font-size: 0.75rem;
+}
+
+body:not(.reset-page) .eyebrow {
+  font-size: 0.66rem;
+}
+
+body:not(.reset-page) .bd-hero h1 {
+  font-size: 4.32rem;
+}
+
+body:not(.reset-page) .hero-lede {
+  font-size: 0.96rem;
+}
+
+body:not(.reset-page) .primary-link,
+body:not(.reset-page) .secondary-link {
+  font-size: 0.8rem;
+}
+
+body:not(.reset-page) .proof-strip h2,
+body:not(.reset-page) .section-heading h2,
+body:not(.reset-page) .split-section h2,
+body:not(.reset-page) .launch-section h2 {
+  font-size: 2.44rem;
+}
+
+body:not(.reset-page) .case-cloud h2 {
+  font-size: 2.56rem;
+}
+
+body:not(.reset-page) .section-heading p,
+body:not(.reset-page) .split-section p,
+body:not(.reset-page) .launch-section p,
+body:not(.reset-page) .source-section p {
+  font-size: 0.83rem;
+}
+
+body:not(.reset-page) .instant-card h3,
+body:not(.reset-page) .signal-card strong,
+body:not(.reset-page) .proof-grid strong,
+body:not(.reset-page) .source-section h2 {
+  font-size: 1.16rem;
+}
+
+body:not(.reset-page) .pain-card h3,
+body:not(.reset-page) .service-card h3,
+body:not(.reset-page) .case-type-list h3,
+body:not(.reset-page) .lawyer-grid strong,
+body:not(.reset-page) .launch-timeline strong {
+  font-size: 0.9rem;
+}
+
+body:not(.reset-page) .instant-card p,
+body:not(.reset-page) .service-card p,
+body:not(.reset-page) .proof-grid span,
+body:not(.reset-page) .case-chips span,
+body:not(.reset-page) .comparison-row span,
+body:not(.reset-page) .store-row span,
+body:not(.reset-page) .site-footer,
+body:not(.reset-page) .language-toggle {
+  font-size: 0.8rem;
+}
+
 .reveal {
   opacity: 0;
   transform: translateY(18px);
@@ -1192,15 +1234,6 @@ a {
   }
   50% {
     transform: skewY(-5deg) scaleX(0.96);
-  }
-}
-
-@keyframes ticker-slide {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
   }
 }
 
@@ -1705,7 +1738,31 @@ button:disabled {
   }
 
   .launch-bd {
-    padding: 28px 14px;
+    padding: 24px 14px;
+  }
+
+  .launch-timeline div {
+    min-height: 74px;
+    padding: 16px 14px 16px 64px;
+  }
+
+  .launch-timeline span {
+    left: 14px;
+    top: 16px;
+    width: 36px;
+    height: 36px;
+  }
+
+  body:not(.reset-page) .bd-hero h1 {
+    font-size: 2.42rem;
+  }
+
+  body:not(.reset-page) .proof-strip h2,
+  body:not(.reset-page) .section-heading h2,
+  body:not(.reset-page) .split-section h2,
+  body:not(.reset-page) .launch-section h2,
+  body:not(.reset-page) .case-cloud h2 {
+    font-size: 1.66rem;
   }
 
   .comparison-section,
