@@ -71,7 +71,7 @@ Push this repository to GitHub, then enable Pages for the branch that contains t
 The sitemap and canonical URL currently target:
 
 ```text
-https://somalrudra.github.io/mukadma-website/
+https://mokoddoma.com/
 ```
 
 Update `index.html`, `robots.txt`, and `sitemap.xml` if the production domain changes.

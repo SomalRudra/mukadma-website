@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://somalrudra.github.io/mukadma-website/sitemap.xml
+Sitemap: https://mokoddoma.com/sitemap.xml
