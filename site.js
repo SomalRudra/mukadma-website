@@ -1,4 +1,28 @@
 (function () {
+  const languageToggle = document.querySelector("[data-language-toggle]");
+  const savedLanguage = window.localStorage.getItem("mokoddoma-language");
+  const initialLanguage = savedLanguage === "bn" ? "bn" : "en";
+
+  const setLanguage = (language) => {
+    document.body.dataset.lang = language;
+    document.documentElement.lang = language === "bn" ? "bn" : "en";
+
+    if (languageToggle) {
+      languageToggle.setAttribute(
+        "aria-label",
+        language === "bn" ? "Switch to English" : "Switch to Bangla"
+      );
+    }
+
+    window.localStorage.setItem("mokoddoma-language", language);
+  };
+
+  setLanguage(initialLanguage);
+
+  languageToggle?.addEventListener("click", () => {
+    setLanguage(document.body.dataset.lang === "bn" ? "en" : "bn");
+  });
+
   const revealItems = document.querySelectorAll(".reveal");
 
   revealItems.forEach((item, index) => {
