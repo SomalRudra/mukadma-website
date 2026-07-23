@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#fff8ef"/>
+  <circle cx="92" cy="270" r="390" fill="#3b2414"/>
+  <circle cx="92" cy="270" r="352" fill="none" stroke="#0f766e" stroke-width="14"/>
+  <circle cx="92" cy="270" r="326" fill="none" stroke="#b7791f" stroke-width="4"/>
+  <rect x="86" y="108" width="704" height="338" rx="18" fill="#fff8ef" opacity="0.94"/>
+  <text x="116" y="235" font-family="Georgia, 'Times New Roman', serif" font-size="88" font-weight="700" fill="#2b130b">Mokoddoma</text>
+  <line x1="120" y1="282" x2="404" y2="282" stroke="#0f766e" stroke-width="4"/>
+  <rect x="413" y="274" width="16" height="16" transform="rotate(45 421 282)" fill="#0f766e"/>
+  <line x1="448" y1="282" x2="708" y2="282" stroke="#0f766e" stroke-width="4"/>
+  <text x="120" y="346" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#2b130b">Lawyer consultation,</text>
+  <text x="120" y="402" font-family="Georgia, 'Times New Roman', serif" font-size="46" font-weight="700" fill="#0f766e">legal help &amp; case tracking</text>
+  <text x="122" y="486" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="29" font-weight="700" fill="#5f4c3c">Built for Bangladesh • Launching soon</text>
+  <rect x="812" y="82" width="226" height="474" rx="48" fill="#101010"/>
+  <rect x="828" y="106" width="194" height="426" rx="38" fill="#fffdf9"/>
+  <rect x="874" y="122" width="82" height="14" rx="7" fill="#101010"/>
+  <rect x="858" y="182" width="134" height="42" rx="12" fill="#d8f3ee"/>
+  <text x="877" y="210" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#0b514c">Consult</text>
+  <rect x="858" y="248" width="134" height="42" rx="12" fill="#fff8ef" stroke="#d8c6b5"/>
+  <text x="877" y="276" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#3b2414">Track</text>
+  <rect x="858" y="314" width="134" height="42" rx="12" fill="#fff8ef" stroke="#d8c6b5"/>
+  <text x="877" y="342" font-family="Avenir Next, Helvetica, Arial, sans-serif" font-size="18" font-weight="700" fill="#3b2414">Hire</text>
+  <rect x="912" y="378" width="258" height="198" rx="18" fill="#0b514c"/>
+  <rect x="938" y="405" width="214" height="22" rx="5" fill="#d8c6b5"/>
+  <rect x="938" y="440" width="214" height="22" rx="5" fill="#d8c6b5"/>
+  <rect x="938" y="475" width="214" height="22" rx="5" fill="#d8c6b5"/>
+  <rect x="120" y="504" width="525" height="100" rx="20" fill="#5b3321"/>
+  <line x1="150" y1="550" x2="580" y2="512" stroke="#d8b276" stroke-width="4"/>
+  <line x1="150" y1="572" x2="580" y2="534" stroke="#d8b276" stroke-width="2"/>
+</svg>

@@ -1,6 +1,6 @@
-# Mukadma Website
+# Mokoddoma Website
 
-Static website for Mukadma business/service information, plus a separate password reset page for app links.
+Static website for Mokoddoma business/service information, plus a separate password reset page for app links.
 
 ## Homepage
 
@@ -19,10 +19,12 @@ SEO basics included:
 
 - Search-friendly title and meta description
 - Open Graph and Twitter metadata
-- `LegalService` structured data
+- `LegalService` and `FAQPage` structured data
 - `robots.txt`
 - `sitemap.xml`
 - Semantic headings and landmark navigation
+
+The social preview image is generated from `assets/og.svg` into `assets/og.png`.
 
 ## Password reset
 
