@@ -455,7 +455,8 @@ a {
   align-items: center;
   border-top: 0;
   border-radius: 8px;
-  padding: clamp(48px, 5vw, 72px);
+  padding: clamp(64px, 6vw, 92px);
+  padding-inline: clamp(72px, 7vw, 112px);
   background:
     linear-gradient(135deg, rgba(216, 243, 238, 0.86), rgba(255, 248, 239, 0.94));
 }
@@ -466,6 +467,7 @@ a {
 .comparison-section,
 .proof-strip,
 .launch-section,
+.waitlist-section,
 .source-section,
 .site-footer {
   width: min(1120px, calc(100% - 40px));
@@ -569,8 +571,7 @@ a {
 }
 
 .launch-badges > span,
-.store-row > span,
-.store-row > a {
+.store-row > span {
   min-height: 38px;
   display: inline-flex;
   align-items: center;
@@ -583,10 +584,26 @@ a {
   font-weight: 900;
 }
 
-.store-row > a {
-  background: var(--primary);
-  color: #fff8ef;
-  text-decoration: none;
+.waitlist-section {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 24px;
+  align-items: center;
+  margin-top: 18px;
+  margin-bottom: 86px;
+  border: 1px solid rgba(216, 198, 181, 0.9);
+  border-radius: 8px;
+  padding: clamp(24px, 4vw, 38px);
+  background: var(--surface);
+  box-shadow: 0 18px 52px rgba(59, 36, 20, 0.08);
+}
+
+.waitlist-section h2 {
+  max-width: 720px;
+  margin: 0;
+  color: var(--primary-strong);
+  font-size: 1.7rem;
+  line-height: 1.14;
 }
 
 .phone-stage {
@@ -1355,6 +1372,10 @@ body:not(.reset-page) .launch-section h2 {
   font-size: 2.44rem;
 }
 
+body:not(.reset-page) .waitlist-section h2 {
+  font-size: 1.36rem;
+}
+
 body:not(.reset-page) .case-cloud h2 {
   font-size: 2.56rem;
 }
@@ -1387,7 +1408,7 @@ body:not(.reset-page) .proof-grid span,
 body:not(.reset-page) .case-chips > span,
 body:not(.reset-page) .comparison-row span,
 body:not(.reset-page) .store-row > span,
-body:not(.reset-page) .store-row > a,
+body:not(.reset-page) .waitlist-section .primary-link,
 body:not(.reset-page) .site-footer,
 body:not(.reset-page) .language-toggle {
   font-size: 0.8rem;
@@ -1779,6 +1800,10 @@ button:disabled {
     grid-template-columns: 1fr;
   }
 
+  .waitlist-section {
+    grid-template-columns: 1fr;
+  }
+
   .proof-grid,
   .pain-grid,
   .service-grid,
@@ -1953,7 +1978,16 @@ button:disabled {
   }
 
   .launch-bd {
-    padding: 32px 18px;
+    padding: 42px 24px;
+  }
+
+  .waitlist-section {
+    width: min(100% - 28px, 1120px);
+    margin-bottom: 56px;
+  }
+
+  .waitlist-section .primary-link {
+    width: 100%;
   }
 
   .launch-timeline div {
