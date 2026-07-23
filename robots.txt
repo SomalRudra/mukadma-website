@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://somalrudra.github.io/mukadma-website/sitemap.xml

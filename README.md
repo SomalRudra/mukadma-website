@@ -1,6 +1,28 @@
 # Mukadma Website
 
-Minimal static website for Mukadma password reset links.
+Static website for Mukadma business/service information, plus a separate password reset page for app links.
+
+## Homepage
+
+The root `index.html` is a descriptive static website. It does not load `config.js`, `app.js`, or call any backend service.
+
+The homepage describes:
+
+- Legal Consultancy
+- Case Status Check
+- Hire a Lawyer
+- Legal Assistance
+- Criminal, civil, family, and other case categories
+- Lawyer verification, dashboards, and consultation support
+
+SEO basics included:
+
+- Search-friendly title and meta description
+- Open Graph and Twitter metadata
+- `LegalService` structured data
+- `robots.txt`
+- `sitemap.xml`
+- Semantic headings and landmark navigation
 
 ## Password reset
 
@@ -45,3 +67,11 @@ Then open the example reset URL above.
 ## Deploy on GitHub Pages
 
 Push this repository to GitHub, then enable Pages for the branch that contains these files. The included `reset-password/index.html` supports reset links like `/reset-password/?token=...`.
+
+The sitemap and canonical URL currently target:
+
+```text
+https://somalrudra.github.io/mukadma-website/
+```
+
+Update `index.html`, `robots.txt`, and `sitemap.xml` if the production domain changes.

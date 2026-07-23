@@ -3,82 +3,200 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#3b2414">
-    <title>Mukadma Password Reset</title>
+    <meta name="theme-color" content="#f7efe5">
+    <meta name="description" content="Mukadma helps people in Bangladesh understand legal issues, check case progress, consult with lawyers, and find verified legal support in Bangla and English.">
+    <meta name="robots" content="index, follow">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://somalrudra.github.io/mukadma-website/">
+    <meta property="og:title" content="Mukadma | Legal Help, Case Tracking, and Lawyer Discovery">
+    <meta property="og:description" content="A bilingual legal services platform for consultation, case status support, lawyer discovery, and practical legal assistance in Bangladesh.">
+    <meta property="og:image" content="https://somalrudra.github.io/mukadma-website/assets/og.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mukadma | Legal Help, Case Tracking, and Lawyer Discovery">
+    <meta name="twitter:description" content="Legal help, case tracking, and lawyer discovery in one place.">
+    <title>Mukadma | Legal Help, Case Tracking, and Lawyer Discovery</title>
+    <link rel="canonical" href="https://somalrudra.github.io/mukadma-website/">
     <link rel="icon" href="./assets/favicon.png">
+    <link rel="preload" href="./assets/mukoddoma_logo_en_whitebg.svg" as="image">
     <link rel="stylesheet" href="./styles.css">
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LegalService",
+        "name": "Mukadma",
+        "url": "https://somalrudra.github.io/mukadma-website/",
+        "description": "Mukadma provides legal consultation, case status support, lawyer discovery, and legal assistance for clients in Bangladesh.",
+        "areaServed": {
+          "@type": "Country",
+          "name": "Bangladesh"
+        },
+        "availableLanguage": ["English", "Bangla"],
+        "serviceType": [
+          "Legal Consultancy",
+          "Case Status Check",
+          "Hire a Lawyer",
+          "Legal Assistance"
+        ]
+      }
+    </script>
   </head>
   <body>
-    <main class="page-shell">
-      <section class="reset-panel" aria-labelledby="page-title">
-        <img class="brand-logo" src="./assets/mukoddoma_logo_en_whitebg.svg" alt="Mukadma">
-        <div class="lock-mark" aria-hidden="true">
-          <svg viewBox="0 0 24 24" role="img">
-            <path d="M7 10V8a5 5 0 0 1 10 0v2h1.25A1.75 1.75 0 0 1 20 11.75v7.5A1.75 1.75 0 0 1 18.25 21H5.75A1.75 1.75 0 0 1 4 19.25v-7.5A1.75 1.75 0 0 1 5.75 10H7Zm2 0h6V8a3 3 0 1 0-6 0v2Zm3 3.75a1.25 1.25 0 0 0-.75 2.25v1.5a.75.75 0 0 0 1.5 0V16A1.25 1.25 0 0 0 12 13.75Z"/>
-          </svg>
+    <header class="site-header">
+      <a class="site-logo" href="./" aria-label="Mukadma home">
+        <img src="./assets/mukoddoma_logo_en_whitebg.svg" alt="Mukadma">
+      </a>
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#case-types">Case types</a>
+        <a href="#lawyers">For lawyers</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero-section" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow">Legal support for Bangladesh</p>
+          <h1 id="hero-title">Legal help, case tracking, and lawyer discovery in one place.</h1>
+          <p class="hero-lede">
+            Mukadma helps clients describe legal problems, understand next steps, check case progress,
+            and connect with lawyers for consultation or appointment.
+          </p>
+          <div class="hero-actions" aria-label="Main actions">
+            <a class="primary-link" href="#services">Explore services</a>
+            <a class="secondary-link" href="#lawyers">Lawyer onboarding</a>
+          </div>
+          <p class="language-note">Available for English and Bangla speaking users.</p>
         </div>
-        <h1 id="page-title">Reset Password</h1>
-        <p class="status-text" data-token-status></p>
+        <div class="hero-panel" aria-label="Mukadma service overview">
+          <div class="panel-topline">How Mukadma supports a legal matter</div>
+          <ol class="process-list">
+            <li>
+              <span>01</span>
+              <strong>Describe the issue</strong>
+              <p>Share case details, district, case type, hearing date, and supporting documents.</p>
+            </li>
+            <li>
+              <span>02</span>
+              <strong>Choose the right help</strong>
+              <p>Request consultation, case status support, lawyer appointment, or broader assistance.</p>
+            </li>
+            <li>
+              <span>03</span>
+              <strong>Move forward with counsel</strong>
+              <p>Communicate with lawyers through chat or video and follow case progress over time.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
 
-        <form class="reset-form" data-reset-form>
-          <label for="new-password">New password</label>
-          <div class="password-field">
-            <input id="new-password" name="new-password" type="password" autocomplete="new-password" minlength="8" required>
-            <button class="password-toggle" type="button" aria-label="Show new password" aria-pressed="false" data-password-toggle="new-password">
-              <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 5c4.6 0 8.4 3.1 10 7-1.6 3.9-5.4 7-10 7S3.6 15.9 2 12c1.6-3.9 5.4-7 10-7Zm0 2c-3.2 0-6 1.9-7.7 5 1.7 3.1 4.5 5 7.7 5s6-1.9 7.7-5C18 8.9 15.2 7 12 7Zm0 2.25A2.75 2.75 0 1 1 12 14.75 2.75 2.75 0 0 1 12 9.25Zm0 1.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
-              </svg>
-              <svg class="icon-eye-off" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m3.28 2 18.7 18.7-1.28 1.28-3.07-3.07A11.43 11.43 0 0 1 12 20C7.4 20 3.6 16.9 2 13c.76-1.84 2.02-3.49 3.6-4.74L2 4.66 3.28 2Zm3.75 7.7A10.06 10.06 0 0 0 4.3 13C6 16.1 8.8 18 12 18c1.45 0 2.81-.39 4.03-1.1l-2.02-2.02A3.02 3.02 0 0 1 9.1 9.97L7.03 7.9Zm4.1 4.1a1.02 1.02 0 0 0 1.68-1.68l-1.68 1.68ZM12 6c4.6 0 8.4 3.1 10 7a12.1 12.1 0 0 1-2.63 3.76l-1.42-1.42A10.17 10.17 0 0 0 19.7 13C18 9.9 15.2 8 12 8c-.8 0-1.57.12-2.3.35L8.1 6.75A11.1 11.1 0 0 1 12 6Zm-.13 3.01L14.99 12A3 3 0 0 0 12 9l-.13.01Z"/>
-              </svg>
-            </button>
-          </div>
-          <div class="password-feedback" data-password-feedback hidden>
-            <div class="password-strength-header">
-              <span>Password strength</span>
-              <strong data-password-strength>Start typing</strong>
-            </div>
-            <div class="password-strength-track" aria-hidden="true">
-              <div class="password-strength-fill" data-password-strength-fill></div>
-            </div>
-            <p class="password-checklist-hint">Green means your password has:</p>
-            <div class="password-check-row" data-password-check="length">
-              <span class="password-check-icon" aria-hidden="true"></span>
-              <span>At least 8 characters</span>
-            </div>
-            <div class="password-check-row" data-password-check="letter">
-              <span class="password-check-icon" aria-hidden="true"></span>
-              <span>Contains a letter</span>
-            </div>
-            <div class="password-check-row" data-password-check="number">
-              <span class="password-check-icon" aria-hidden="true"></span>
-              <span>Contains a number</span>
-            </div>
-            <div class="password-check-row" data-password-check="special">
-              <span class="password-check-icon" aria-hidden="true"></span>
-              <span>Contains a special character</span>
-            </div>
-          </div>
+      <section class="section-band" id="services" aria-labelledby="services-title">
+        <div class="section-heading">
+          <p class="eyebrow">What we do</p>
+          <h2 id="services-title">Practical legal services for everyday needs</h2>
+          <p>
+            Mukadma is designed for people who need clearer access to legal guidance, case information,
+            and qualified lawyers without navigating the process alone.
+          </p>
+        </div>
+        <div class="service-grid">
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">LC</span>
+            <h3>Legal Consultancy</h3>
+            <p>Describe your case and receive advice from a lawyer through chat or video consultation.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">CS</span>
+            <h3>Case Status Check</h3>
+            <p>Provide case details such as suit number, parties, district, and last hearing date to review progress.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">HL</span>
+            <h3>Hire a Lawyer</h3>
+            <p>Find a lawyer suitable for the district, case category, expertise, and legal support you need.</p>
+          </article>
+          <article class="service-card">
+            <span class="service-icon" aria-hidden="true">LA</span>
+            <h3>Legal Assistance</h3>
+            <p>Request help for legal issues that need direction, documentation review, or next-step planning.</p>
+          </article>
+        </div>
+      </section>
 
-          <label for="confirm-password">Confirm new password</label>
-          <div class="password-field">
-            <input id="confirm-password" name="confirm-password" type="password" autocomplete="new-password" minlength="8" required>
-            <button class="password-toggle" type="button" aria-label="Show confirmed password" aria-pressed="false" data-password-toggle="confirm-password">
-              <svg class="icon-eye" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M12 5c4.6 0 8.4 3.1 10 7-1.6 3.9-5.4 7-10 7S3.6 15.9 2 12c1.6-3.9 5.4-7 10-7Zm0 2c-3.2 0-6 1.9-7.7 5 1.7 3.1 4.5 5 7.7 5s6-1.9 7.7-5C18 8.9 15.2 7 12 7Zm0 2.25A2.75 2.75 0 1 1 12 14.75 2.75 2.75 0 0 1 12 9.25Zm0 1.75a1 1 0 1 0 0 2 1 1 0 0 0 0-2Z"/>
-              </svg>
-              <svg class="icon-eye-off" viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m3.28 2 18.7 18.7-1.28 1.28-3.07-3.07A11.43 11.43 0 0 1 12 20C7.4 20 3.6 16.9 2 13c.76-1.84 2.02-3.49 3.6-4.74L2 4.66 3.28 2Zm3.75 7.7A10.06 10.06 0 0 0 4.3 13C6 16.1 8.8 18 12 18c1.45 0 2.81-.39 4.03-1.1l-2.02-2.02A3.02 3.02 0 0 1 9.1 9.97L7.03 7.9Zm4.1 4.1a1.02 1.02 0 0 0 1.68-1.68l-1.68 1.68ZM12 6c4.6 0 8.4 3.1 10 7a12.1 12.1 0 0 1-2.63 3.76l-1.42-1.42A10.17 10.17 0 0 0 19.7 13C18 9.9 15.2 8 12 8c-.8 0-1.57.12-2.3.35L8.1 6.75A11.1 11.1 0 0 1 12 6Zm-.13 3.01L14.99 12A3 3 0 0 0 12 9l-.13.01Z"/>
-              </svg>
-            </button>
-          </div>
+      <section class="split-section" id="case-types" aria-labelledby="case-types-title">
+        <div>
+          <p class="eyebrow">Case coverage</p>
+          <h2 id="case-types-title">Support across common legal categories</h2>
+          <p>
+            The Mukadma app organizes matters by practical categories so clients can explain their issue
+            and lawyers can understand the nature of the request quickly.
+          </p>
+        </div>
+        <div class="case-type-list">
+          <article>
+            <h3>Criminal</h3>
+            <p>Murder, assault, theft, robbery, fraud, narcotics, cheque dishonor, and related matters.</p>
+          </article>
+          <article>
+            <h3>Civil</h3>
+            <p>Property disputes, land mutation, partition suits, contract disputes, money recovery, and eviction.</p>
+          </article>
+          <article>
+            <h3>Family</h3>
+            <p>Divorce, khula, child custody, maintenance, inheritance, and family-related legal questions.</p>
+          </article>
+          <article>
+            <h3>Other Legal Issues</h3>
+            <p>A pathway for matters that do not fit neatly into one category but still need legal attention.</p>
+          </article>
+        </div>
+      </section>
 
-          <button type="submit" data-submit>Reset password</button>
-          <p class="form-message" data-message hidden></p>
-        </form>
+      <section class="section-band muted-band" id="lawyers" aria-labelledby="lawyers-title">
+        <div class="section-heading">
+          <p class="eyebrow">For lawyers</p>
+          <h2 id="lawyers-title">A trusted channel for verified legal professionals</h2>
+          <p>
+            Mukadma supports lawyer registration and profile verification before lawyers can receive consultation
+            or case requests. The platform is built to help lawyers manage availability, review assigned matters,
+            and communicate with clients.
+          </p>
+        </div>
+        <div class="lawyer-grid">
+          <div>
+            <strong>Profile verification</strong>
+            <p>Lawyer information is collected for review before approval.</p>
+          </div>
+          <div>
+            <strong>Case dashboards</strong>
+            <p>Lawyers can track unassigned, assigned, accepted, and completed matters.</p>
+          </div>
+          <div>
+            <strong>Consultation tools</strong>
+            <p>Chat, video consultation, document sharing, and availability management support client work.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="split-section closing-section" id="contact" aria-labelledby="contact-title">
+        <div>
+          <p class="eyebrow">Why Mukadma</p>
+          <h2 id="contact-title">Built for clarity, access, and legal confidence.</h2>
+        </div>
+        <div class="closing-copy">
+          <p>
+            Legal issues can feel difficult to explain and harder to navigate. Mukadma brings the first steps
+            into a structured, bilingual experience so clients and lawyers can start with better information.
+          </p>
+          <a class="primary-link" href="#services">Review our services</a>
+        </div>
       </section>
     </main>
-    <script src="./config.js"></script>
-    <script src="./app.js"></script>
+
+    <footer class="site-footer">
+      <img src="./assets/mukoddoma_logo_en_whitebg.svg" alt="Mukadma">
+      <p>Legal help, case tracking, and lawyer discovery in one place.</p>
+      <a href="./reset-password/">Password reset</a>
+    </footer>
   </body>
 </html>
