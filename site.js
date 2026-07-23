@@ -221,9 +221,7 @@
       }
 
       setContactStatus("success", "success");
-      window.setTimeout(() => {
-        preparedMailLink?.click();
-      }, 80);
+      window.location.assign(mailto);
     });
   }
 
