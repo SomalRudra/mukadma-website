@@ -459,6 +459,7 @@ a {
   padding-inline: clamp(72px, 7vw, 112px);
   background:
     linear-gradient(135deg, rgba(216, 243, 238, 0.86), rgba(255, 248, 239, 0.94));
+  overflow: hidden;
 }
 
 .hero-section,
@@ -877,7 +878,7 @@ a {
   transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
 }
 
-.flow-tab span {
+.flow-tab > span {
   width: 40px;
   height: 40px;
   display: grid;
@@ -891,6 +892,10 @@ a {
 
 .flow-tab strong {
   color: var(--primary-strong);
+  display: block;
+  min-width: 0;
+  line-height: 1.2;
+  overflow-wrap: anywhere;
 }
 
 .flow-tab:hover,
@@ -902,7 +907,7 @@ a {
   transform: translateX(5px);
 }
 
-.flow-tab.is-active span {
+.flow-tab.is-active > span {
   background: #006a4e;
   color: #ffffff;
 }
@@ -1156,6 +1161,32 @@ a {
   box-shadow: 0 18px 52px rgba(59, 36, 20, 0.08);
 }
 
+.flow-icon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 22px;
+}
+
+.flow-icon-row span {
+  min-width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  padding: 0 8px;
+  background: #d8f3ee;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 900;
+  box-shadow: inset 0 0 0 1px rgba(0, 106, 78, 0.12);
+}
+
+.flow-icon-row span:first-child {
+  background: #006a4e;
+  color: #ffffff;
+}
+
 .flow-copy {
   display: none;
   animation: copy-slide-in 340ms ease both;
@@ -1170,6 +1201,7 @@ a {
   color: var(--primary-strong);
   font-size: 1.35rem;
   line-height: 1.18;
+  overflow-wrap: anywhere;
 }
 
 .flow-copy p {
@@ -1337,6 +1369,16 @@ a {
 .section-heading h2,
 .split-section h2,
 .launch-section h2 {
+  max-width: 760px;
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
+[data-lang="bn"] .launch-section h2 {
+  line-height: 1.08;
+}
+
+.launch-section h2 {
   font-size: 3.05rem;
   line-height: 1.05;
 }
@@ -1378,22 +1420,22 @@ a {
 
 .service-image-box {
   width: 100%;
-  height: 154px;
+  height: 138px;
   display: grid;
   place-items: center;
-  padding: 18px;
+  padding: 16px 18px 10px;
   background: var(--surface);
 }
 
 .service-image-box img {
-  width: 100%;
-  height: 100%;
+  width: min(100%, 180px);
+  height: 112px;
   display: block;
   object-fit: contain;
 }
 
 .service-card-copy {
-  padding: 18px 16px 0;
+  padding: 20px 24px 0;
 }
 
 .service-arrow {
@@ -1436,6 +1478,8 @@ a {
   margin: 0 0 10px;
   color: var(--primary-strong);
   font-size: 1.12rem;
+  line-height: 1.24;
+  overflow-wrap: anywhere;
 }
 
 .pain-card p,
@@ -1444,7 +1488,8 @@ a {
 .lawyer-grid p {
   margin: 0;
   color: #6f5a48;
-  line-height: 1.56;
+  line-height: 1.62;
+  overflow-wrap: anywhere;
 }
 
 .comparison-section {
@@ -1877,6 +1922,10 @@ body:not(.reset-page) .section-heading h2,
 body:not(.reset-page) .split-section h2,
 body:not(.reset-page) .launch-section h2 {
   font-size: 2.44rem;
+}
+
+body:not(.reset-page) .launch-section h2 {
+  font-size: clamp(1.9rem, 4.2vw, 2.44rem);
 }
 
 body:not(.reset-page) .waitlist-section h2 {
@@ -2590,6 +2639,15 @@ button:disabled {
     padding: 12px 10px;
   }
 
+  .flow-tab > span {
+    width: 36px;
+    height: 36px;
+  }
+
+  .flow-tab strong {
+    font-size: 0.76rem;
+  }
+
   .flow-phone-cluster {
     min-height: 620px;
   }
@@ -2609,6 +2667,22 @@ button:disabled {
 
   .flow-copy h3 {
     font-size: 1.15rem;
+  }
+
+  .service-card {
+    min-height: 300px;
+  }
+
+  .service-image-box {
+    height: 128px;
+  }
+
+  .service-image-box img {
+    height: 98px;
+  }
+
+  .service-card-copy {
+    padding-inline: 20px;
   }
 
   .launch-bd {
