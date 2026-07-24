@@ -654,6 +654,530 @@ a {
   background: linear-gradient(180deg, #fffdf9, #e9f5f1);
 }
 
+.hero-app-phone {
+  width: min(326px, 78vw);
+}
+
+.app-dashboard-screen,
+.flow-screen {
+  gap: 13px;
+  padding: 18px 15px;
+  overflow: hidden;
+}
+
+.mock-statusbar,
+.mock-appbar,
+.lawyer-head,
+.fee-row,
+.mock-action-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.mock-statusbar {
+  min-height: 22px;
+  color: #846e5b;
+  font-size: 0.7rem;
+  font-weight: 900;
+}
+
+.mock-appbar small,
+.screen-title small,
+.lawyer-head small {
+  display: block;
+  color: var(--accent);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.mock-appbar strong,
+.screen-title strong {
+  display: block;
+  color: var(--primary-strong);
+  font-size: 1.18rem;
+  line-height: 1.14;
+}
+
+.mock-avatar,
+.lawyer-avatar {
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #006a4e;
+  color: #ffffff;
+  font-size: 0.86rem;
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(0, 106, 78, 0.2);
+}
+
+.mock-create-card {
+  min-height: 112px;
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  gap: 12px;
+  align-items: center;
+  padding: 14px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #006a4e, #0f766e);
+  color: #ffffff;
+  box-shadow: 0 18px 38px rgba(0, 106, 78, 0.18);
+  animation: dashboard-lift 4.2s ease-in-out infinite;
+}
+
+.mock-create-card > span {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1.8rem;
+  line-height: 1;
+}
+
+.mock-create-card b,
+.mock-create-card small {
+  display: block;
+}
+
+.mock-create-card b {
+  font-size: 1.04rem;
+}
+
+.mock-create-card small {
+  margin-top: 4px;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.35;
+}
+
+.mock-quick-row,
+.mock-metrics,
+.mock-services-mini,
+.category-grid,
+.mode-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.mock-quick-row div,
+.mock-metrics div,
+.mock-services-mini article,
+.category-card,
+.mode-grid article,
+.lawyer-card-mock,
+.profile-card-mock {
+  border: 1px solid rgba(216, 198, 181, 0.86);
+  border-radius: 14px;
+  background: #ffffff;
+  box-shadow: 0 10px 28px rgba(44, 34, 28, 0.07);
+}
+
+.mock-quick-row div {
+  display: grid;
+  gap: 8px;
+  padding: 12px;
+}
+
+.mock-quick-row span {
+  width: 34px;
+  height: 34px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  background: #d8f3ee;
+  color: #075a45;
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.mock-quick-row b,
+.mock-services-mini b {
+  color: var(--primary-strong);
+  font-size: 0.82rem;
+}
+
+.mock-metrics {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mock-metrics div {
+  min-height: 72px;
+  display: grid;
+  place-items: center;
+  padding: 8px;
+}
+
+.mock-metrics strong {
+  color: var(--primary-strong);
+  font-size: 1.25rem;
+}
+
+.mock-metrics span {
+  color: #7a6250;
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.mock-services-mini article {
+  min-height: 104px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 8px;
+  padding: 10px;
+}
+
+.mock-services-mini img {
+  width: 64px;
+  height: 48px;
+  object-fit: contain;
+}
+
+.app-flow-section {
+  width: 100%;
+  max-width: none;
+  padding: 92px max(20px, calc((100% - 1120px) / 2));
+  background:
+    linear-gradient(180deg, rgba(255, 253, 249, 0.88), rgba(237, 245, 241, 0.92));
+}
+
+.app-flow-board {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.58fr) minmax(310px, 0.86fr) minmax(260px, 0.68fr);
+  gap: clamp(18px, 3vw, 32px);
+  align-items: center;
+}
+
+.flow-tabs {
+  display: grid;
+  gap: 12px;
+}
+
+.flow-tab {
+  width: 100%;
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: 42px minmax(0, 1fr);
+  align-items: center;
+  gap: 12px;
+  margin: 0;
+  padding: 14px;
+  border: 1px solid rgba(216, 198, 181, 0.9);
+  border-radius: 8px;
+  background: rgba(255, 253, 249, 0.86);
+  color: var(--primary);
+  text-align: left;
+  box-shadow: none;
+  transition: transform 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+.flow-tab span {
+  width: 40px;
+  height: 40px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  background: #edf5f1;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 900;
+}
+
+.flow-tab strong {
+  color: var(--primary-strong);
+}
+
+.flow-tab:hover,
+.flow-tab:focus-visible,
+.flow-tab.is-active {
+  border-color: rgba(0, 106, 78, 0.56);
+  background: #ffffff;
+  outline: none;
+  transform: translateX(5px);
+}
+
+.flow-tab.is-active span {
+  background: #006a4e;
+  color: #ffffff;
+}
+
+.flow-phone-cluster {
+  min-height: 638px;
+  display: grid;
+  place-items: center;
+  position: relative;
+}
+
+.flow-phone-cluster::before {
+  content: "";
+  position: absolute;
+  width: 390px;
+  height: 390px;
+  border: 1px dashed rgba(0, 106, 78, 0.22);
+  border-radius: 50%;
+  animation: slow-spin 26s linear infinite;
+}
+
+.app-flow-phone {
+  position: relative;
+  z-index: 1;
+  width: min(318px, 78vw);
+  animation: flow-phone-in 420ms ease both, phone-float 5s ease-in-out infinite;
+}
+
+.screen-title {
+  display: grid;
+  gap: 3px;
+  margin-bottom: 2px;
+}
+
+.mock-search {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(216, 198, 181, 0.9);
+  border-radius: 12px;
+  padding: 0 12px;
+  background: #ffffff;
+  color: #7a6250;
+  font-size: 0.76rem;
+  font-weight: 800;
+}
+
+.category-card,
+.mode-grid article {
+  min-height: 84px;
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  padding: 12px;
+}
+
+.category-card b,
+.mode-grid b,
+.lawyer-card-mock b,
+.profile-card-mock b,
+.timeline-mock b {
+  color: var(--primary-strong);
+  font-size: 0.86rem;
+}
+
+.category-card span,
+.mode-grid span,
+.lawyer-card-mock small,
+.lawyer-facts span,
+.profile-card-mock span,
+.timeline-mock span {
+  color: #735d4b;
+  font-size: 0.68rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.category-card.is-active,
+.mode-grid .is-active {
+  border-color: rgba(0, 106, 78, 0.48);
+  background: #d8f3ee;
+}
+
+.mock-chip-row,
+.filter-row,
+.slot-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.mock-chip-row span,
+.filter-row span,
+.slot-list span,
+.mock-action-row span,
+.doc-pill {
+  min-height: 30px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0 10px;
+  background: #edf5f1;
+  color: var(--accent-strong);
+  font-size: 0.68rem;
+  font-weight: 900;
+}
+
+.filter-row span:first-child,
+.slot-list .is-active,
+.mock-action-row span {
+  background: #006a4e;
+  color: #ffffff;
+}
+
+.lawyer-card-mock {
+  display: grid;
+  gap: 12px;
+  padding: 14px;
+}
+
+.lawyer-facts {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 7px;
+}
+
+.lawyer-facts span,
+.profile-card-mock span {
+  min-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0 8px;
+  background: #fff8ef;
+}
+
+.fee-row b {
+  font-size: 0.94rem;
+}
+
+.fee-row span {
+  color: var(--gold);
+  font-size: 0.72rem;
+  font-weight: 900;
+}
+
+.profile-card-mock {
+  display: grid;
+  gap: 8px;
+  padding: 13px;
+}
+
+.mode-grid {
+  margin-bottom: 2px;
+}
+
+.slot-list {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.slot-list span {
+  justify-content: center;
+  border-radius: 12px;
+  min-height: 36px;
+}
+
+.chat-preview {
+  display: grid;
+  gap: 8px;
+  margin-top: 2px;
+  padding: 12px;
+  border-radius: 16px;
+  background: #ffffff;
+}
+
+.bubble {
+  max-width: 82%;
+  padding: 9px 11px;
+  border-radius: 14px;
+  color: var(--primary-strong);
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.bubble.left {
+  justify-self: start;
+  background: #edf5f1;
+}
+
+.bubble.right {
+  justify-self: end;
+  background: #006a4e;
+  color: #ffffff;
+}
+
+.doc-pill {
+  justify-self: center;
+}
+
+.timeline-mock {
+  position: relative;
+  display: grid;
+  gap: 10px;
+  margin-top: 4px;
+}
+
+.timeline-mock div {
+  position: relative;
+  min-height: 64px;
+  display: grid;
+  align-content: center;
+  gap: 4px;
+  padding: 10px 12px 10px 38px;
+  border: 1px solid rgba(216, 198, 181, 0.86);
+  border-radius: 14px;
+  background: #ffffff;
+}
+
+.timeline-mock div::before {
+  content: "";
+  position: absolute;
+  left: 14px;
+  top: 22px;
+  width: 11px;
+  height: 11px;
+  border: 2px solid #c9b8aa;
+  border-radius: 50%;
+  background: #ffffff;
+}
+
+.timeline-mock .done::before,
+.timeline-mock .active::before {
+  border-color: #006a4e;
+  background: #006a4e;
+}
+
+.timeline-mock .active {
+  border-color: rgba(0, 106, 78, 0.5);
+  box-shadow: 0 14px 28px rgba(0, 106, 78, 0.12);
+}
+
+.flow-copy-panel {
+  min-height: 280px;
+  position: relative;
+  padding: 24px;
+  border: 1px solid rgba(216, 198, 181, 0.9);
+  border-radius: 8px;
+  background: #ffffff;
+  box-shadow: 0 18px 52px rgba(59, 36, 20, 0.08);
+}
+
+.flow-copy {
+  display: none;
+  animation: copy-slide-in 340ms ease both;
+}
+
+.flow-copy.is-active {
+  display: block;
+}
+
+.flow-copy h3 {
+  margin: 0;
+  color: var(--primary-strong);
+  font-size: 1.35rem;
+  line-height: 1.18;
+}
+
+.flow-copy p {
+  margin: 14px 0 0;
+  color: #6b5544;
+  line-height: 1.62;
+}
+
 .app-topbar {
   display: flex;
   align-items: center;
@@ -1373,6 +1897,7 @@ body:not(.reset-page) .source-section p {
 body:not(.reset-page) .instant-card h3,
 body:not(.reset-page) .signal-card strong,
 body:not(.reset-page) .proof-grid strong,
+body:not(.reset-page) .flow-copy h3,
 body:not(.reset-page) .source-section h2 {
   font-size: 1.16rem;
 }
@@ -1381,6 +1906,8 @@ body:not(.reset-page) .pain-card h3,
 body:not(.reset-page) .service-card h3,
 body:not(.reset-page) .case-type-list h3,
 body:not(.reset-page) .lawyer-grid strong,
+body:not(.reset-page) .mock-appbar strong,
+body:not(.reset-page) .screen-title strong,
 body:not(.reset-page) .launch-timeline strong {
   font-size: 0.9rem;
 }
@@ -1392,6 +1919,7 @@ body:not(.reset-page) .case-chips > span,
 body:not(.reset-page) .comparison-row span,
 body:not(.reset-page) .store-row > span,
 body:not(.reset-page) .waitlist-section .primary-link,
+body:not(.reset-page) .flow-copy p,
 body:not(.reset-page) .site-footer,
 body:not(.reset-page) .language-toggle {
   font-size: 0.8rem;
@@ -1478,6 +2006,37 @@ body:not(.reset-page) .language-toggle {
   50% {
     transform: translateY(-4px);
     box-shadow: 0 22px 52px rgba(244, 42, 65, 0.22);
+  }
+}
+
+@keyframes dashboard-lift {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes flow-phone-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes copy-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -1829,6 +2388,30 @@ button:disabled {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .app-flow-board {
+    grid-template-columns: 1fr;
+  }
+
+  .flow-tabs {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .flow-tab {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .flow-tab:hover,
+  .flow-tab:focus-visible,
+  .flow-tab.is-active {
+    transform: translateY(-3px);
+  }
+
+  .flow-copy-panel {
+    min-height: auto;
+  }
+
   .bd-motion-stage,
   .phone-stage {
     min-height: 590px;
@@ -1860,6 +2443,7 @@ button:disabled {
   .section-band,
   .split-section,
   .comparison-section,
+  .app-flow-section,
   .proof-strip,
   .instant-section,
   .case-cloud,
@@ -1980,6 +2564,7 @@ button:disabled {
   .section-band,
   .comparison-section,
   .split-section,
+  .app-flow-section,
   .instant-section,
   .seo-faq-section,
   .case-cloud,
@@ -1994,6 +2579,36 @@ button:disabled {
 
   .case-cloud h2 {
     font-size: 2.08rem;
+  }
+
+  .flow-tabs {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .flow-tab {
+    min-height: 68px;
+    padding: 12px 10px;
+  }
+
+  .flow-phone-cluster {
+    min-height: 620px;
+  }
+
+  .flow-phone-cluster::before {
+    width: 318px;
+    height: 318px;
+  }
+
+  .app-flow-phone {
+    width: min(292px, 86vw);
+  }
+
+  .flow-copy-panel {
+    padding: 20px;
+  }
+
+  .flow-copy h3 {
+    font-size: 1.15rem;
   }
 
   .launch-bd {

@@ -69,4 +69,60 @@
     }, 2600);
   }
 
+  const appFlow = document.querySelector("[data-app-flow]");
+
+  if (appFlow) {
+    const flowTabs = Array.from(appFlow.querySelectorAll("[data-flow-tab]"));
+    const flowScreens = Array.from(appFlow.querySelectorAll("[data-flow-screen]"));
+    const flowCopies = Array.from(appFlow.querySelectorAll("[data-flow-copy]"));
+    let activeFlow = 0;
+    let flowTimer;
+
+    const activateFlow = (index) => {
+      const selectedTab = flowTabs[index];
+      const selectedKey = selectedTab?.dataset.flowTab;
+
+      if (!selectedKey) {
+        return;
+      }
+
+      flowTabs.forEach((tab) => {
+        const isActive = tab === selectedTab;
+        tab.classList.toggle("is-active", isActive);
+        tab.setAttribute("aria-selected", String(isActive));
+      });
+
+      flowScreens.forEach((screen) => {
+        screen.hidden = screen.dataset.flowScreen !== selectedKey;
+      });
+
+      flowCopies.forEach((copy) => {
+        copy.classList.toggle("is-active", copy.dataset.flowCopy === selectedKey);
+      });
+
+      activeFlow = index;
+    };
+
+    const startFlowTimer = () => {
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches || flowTabs.length < 2) {
+        return;
+      }
+
+      flowTimer = window.setInterval(() => {
+        activateFlow((activeFlow + 1) % flowTabs.length);
+      }, 4200);
+    };
+
+    flowTabs.forEach((tab, index) => {
+      tab.addEventListener("click", () => {
+        window.clearInterval(flowTimer);
+        activateFlow(index);
+        startFlowTimer();
+      });
+    });
+
+    activateFlow(0);
+    startFlowTimer();
+  }
+
 })();

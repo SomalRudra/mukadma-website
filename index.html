@@ -91,6 +91,7 @@
       <nav class="site-nav" aria-label="Primary navigation">
         <a href="#why"><span class="lang-en">Why</span><span class="lang-bn">কেন</span></a>
         <a href="#instant"><span class="lang-en">Instant</span><span class="lang-bn">ধাপ</span></a>
+        <a href="#app-flow"><span class="lang-en">App</span><span class="lang-bn">অ্যাপ</span></a>
         <a href="#services"><span class="lang-en">Services</span><span class="lang-bn">সেবা</span></a>
         <a href="#legal-help"><span class="lang-en">Legal Help</span><span class="lang-bn">আইন সহায়তা</span></a>
         <a href="#launch"><span class="lang-en">Launch</span><span class="lang-bn">আসছে</span></a>
@@ -130,24 +131,51 @@
             <img src="./assets/bangladesh-flag.svg" alt="">
             <strong><span class="lang-en">Our legal path</span><span class="lang-bn">আইনগত সহায়তার সহজ পথ</span></strong>
           </div>
-          <div class="phone-mockup local-phone" aria-hidden="true">
+          <div class="phone-mockup local-phone hero-app-phone" aria-hidden="true">
             <div class="phone-speaker"></div>
-            <div class="phone-screen">
-              <div class="app-topbar">
-                <span></span>
-                <strong>Mokoddoma</strong>
+            <div class="phone-screen app-dashboard-screen">
+              <div class="mock-statusbar">
+                <span>9:41</span>
+                <span>5G</span>
               </div>
-              <div class="app-card active">
-                <small>Tap 1</small>
-                <b>Tell us the issue</b>
+              <div class="mock-appbar">
+                <div>
+                  <small>Welcome back</small>
+                  <strong>Mokoddoma</strong>
+                </div>
+                <span class="mock-avatar">M</span>
               </div>
-              <div class="app-card">
-                <small>Tap 2</small>
-                <b>Choose legal help</b>
+              <div class="mock-create-card">
+                <span>+</span>
+                <div>
+                  <b>Create a case</b>
+                  <small>Describe your issue and get matched to the right next step.</small>
+                </div>
               </div>
-              <div class="app-card">
-                <small>Tap 3</small>
-                <b>Talk, track, move</b>
+              <div class="mock-quick-row">
+                <div>
+                  <span>CH</span>
+                  <b>Consult</b>
+                </div>
+                <div>
+                  <span>LW</span>
+                  <b>Hire lawyer</b>
+                </div>
+              </div>
+              <div class="mock-metrics">
+                <div><strong>3</strong><span>Active</span></div>
+                <div><strong>1</strong><span>Awaiting</span></div>
+                <div><strong>8</strong><span>Closed</span></div>
+              </div>
+              <div class="mock-services-mini">
+                <article>
+                  <img src="./assets/case_status_check.png" alt="">
+                  <b>Legal Consultancy</b>
+                </article>
+                <article>
+                  <img src="./assets/consult_with_lawyers.png" alt="">
+                  <b>Hire a Lawyer</b>
+                </article>
               </div>
             </div>
           </div>
@@ -211,6 +239,158 @@
             <h3><span class="lang-en">Move with a lawyer</span><span class="lang-bn">বিজ্ঞ আইনজীবীর সাথে কথা বলুন</span></h3>
             <p><span class="lang-en">Chat, video, documents.</span><span class="lang-bn">কথা, প্রয়োজনীয় কাগজপত্র ও পরবর্তী পদক্ষেপ।</span></p>
           </article>
+        </div>
+      </section>
+
+      <section class="app-flow-section" id="app-flow" aria-labelledby="app-flow-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow"><span class="lang-en">Inside the app</span><span class="lang-bn">অ্যাপের ভিতরের পথ</span></p>
+          <h2 id="app-flow-title">
+            <span class="lang-en">A legal journey that feels connected from the first tap.</span>
+            <span class="lang-bn">প্রথম ট্যাপ থেকেই গোছানো আইনগত সহায়তার অভিজ্ঞতা।</span>
+          </h2>
+          <p>
+            <span class="lang-en">These mockups follow the React Native app flow: issue finder, verified lawyer discovery, consultation booking, secure chat, and case progress.</span>
+            <span class="lang-bn">এই মকআপগুলো অ্যাপের আসল ফ্লো অনুসরণ করে: সমস্যার ধরন বাছাই, যাচাই করা আইনজীবী, পরামর্শের সময়, চ্যাট ও মামলার অগ্রগতি।</span>
+          </p>
+        </div>
+
+        <div class="app-flow-board reveal" data-app-flow>
+          <div class="flow-tabs" role="tablist" aria-label="App flow mockups">
+            <button class="flow-tab is-active" type="button" role="tab" aria-selected="true" data-flow-tab="finder">
+              <span>01</span>
+              <strong><span class="lang-en">Find issue</span><span class="lang-bn">বিষয় বাছাই</span></strong>
+            </button>
+            <button class="flow-tab" type="button" role="tab" aria-selected="false" data-flow-tab="lawyer">
+              <span>02</span>
+              <strong><span class="lang-en">Choose lawyer</span><span class="lang-bn">আইনজীবী বাছাই</span></strong>
+            </button>
+            <button class="flow-tab" type="button" role="tab" aria-selected="false" data-flow-tab="consult">
+              <span>03</span>
+              <strong><span class="lang-en">Book consult</span><span class="lang-bn">পরামর্শ বুকিং</span></strong>
+            </button>
+            <button class="flow-tab" type="button" role="tab" aria-selected="false" data-flow-tab="track">
+              <span>04</span>
+              <strong><span class="lang-en">Track case</span><span class="lang-bn">মামলা ট্র্যাক</span></strong>
+            </button>
+          </div>
+
+          <div class="flow-phone-cluster" aria-live="polite">
+            <div class="phone-mockup app-flow-phone" data-flow-screen="finder">
+              <div class="phone-speaker"></div>
+              <div class="phone-screen flow-screen">
+                <div class="mock-statusbar"><span>9:41</span><span>5G</span></div>
+                <div class="screen-title">
+                  <small>Legal issue finder</small>
+                  <strong>What do you need help with?</strong>
+                </div>
+                <div class="mock-search">Search murder, property, divorce...</div>
+                <div class="category-grid">
+                  <article class="category-card is-active"><b>Criminal</b><span>Murder, theft, fraud</span></article>
+                  <article class="category-card"><b>Civil</b><span>Property, contracts</span></article>
+                  <article class="category-card"><b>Family</b><span>Divorce, custody</span></article>
+                  <article class="category-card"><b>Others</b><span>Legal issues</span></article>
+                </div>
+                <div class="mock-chip-row">
+                  <span>Cheque dishonor</span>
+                  <span>Land mutation</span>
+                  <span>Maintenance</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-mockup app-flow-phone" data-flow-screen="lawyer" hidden>
+              <div class="phone-speaker"></div>
+              <div class="phone-screen flow-screen">
+                <div class="mock-statusbar"><span>9:41</span><span>5G</span></div>
+                <div class="screen-title">
+                  <small>Verified lawyers</small>
+                  <strong>Choose legal support</strong>
+                </div>
+                <div class="filter-row"><span>All</span><span>Civil</span><span>Criminal</span><span>Fee ↓</span></div>
+                <article class="lawyer-card-mock">
+                  <div class="lawyer-head">
+                    <span class="lawyer-avatar">RA</span>
+                    <div><b>Rashid Ahmed</b><small>Shield verified</small></div>
+                  </div>
+                  <div class="lawyer-facts">
+                    <span>LIN 29384</span>
+                    <span>Dhaka Bar</span>
+                    <span>Criminal law</span>
+                  </div>
+                  <div class="fee-row"><b>৳1,500/hr</b><span>4.8 rating</span></div>
+                  <div class="mock-action-row"><span>Chat</span><span>Video</span></div>
+                </article>
+                <article class="profile-card-mock">
+                  <b>Profile preview</b>
+                  <span>High Court 6 yrs</span>
+                  <span>District Court 9 yrs</span>
+                </article>
+              </div>
+            </div>
+
+            <div class="phone-mockup app-flow-phone" data-flow-screen="consult" hidden>
+              <div class="phone-speaker"></div>
+              <div class="phone-screen flow-screen">
+                <div class="mock-statusbar"><span>9:41</span><span>5G</span></div>
+                <div class="screen-title">
+                  <small>Consultation</small>
+                  <strong>Book and share context</strong>
+                </div>
+                <div class="mode-grid">
+                  <article class="is-active"><b>Chat</b><span>Private messages</span></article>
+                  <article><b>Video</b><span>Face-to-face</span></article>
+                </div>
+                <div class="slot-list">
+                  <span>Today 7:30 PM</span>
+                  <span class="is-active">Tomorrow 10:00 AM</span>
+                  <span>Friday 4:15 PM</span>
+                </div>
+                <div class="chat-preview">
+                  <div class="bubble left">Please upload the deed copy.</div>
+                  <div class="bubble right">Uploaded two documents.</div>
+                  <div class="doc-pill">2 documents attached</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="phone-mockup app-flow-phone" data-flow-screen="track" hidden>
+              <div class="phone-speaker"></div>
+              <div class="phone-screen flow-screen">
+                <div class="mock-statusbar"><span>9:41</span><span>5G</span></div>
+                <div class="screen-title">
+                  <small>Case progress</small>
+                  <strong>Your next step is visible</strong>
+                </div>
+                <div class="timeline-mock">
+                  <div class="done"><b>Case created</b><span>Submitted by client</span></div>
+                  <div class="done"><b>Lawyer assigned</b><span>Verified advocate matched</span></div>
+                  <div class="active"><b>Consultation accepted</b><span>Tomorrow 10:00 AM</span></div>
+                  <div><b>In progress</b><span>Awaiting update</span></div>
+                  <div><b>Completed</b><span>Final note pending</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flow-copy-panel">
+            <article class="flow-copy is-active" data-flow-copy="finder">
+              <h3><span class="lang-en">Use the app’s real legal categories.</span><span class="lang-bn">অ্যাপের আসল ক্যাটাগরি দেখানো হবে।</span></h3>
+              <p><span class="lang-en">Civil, Criminal, Family, and Others can become clickable website previews instead of static coming-soon chips.</span><span class="lang-bn">দেওয়ানি, ফৌজদারি, পারিবারিক ও অন্যান্য বিষয় ওয়েবসাইটে ইন্টারঅ্যাকটিভ প্রিভিউ হিসেবে দেখানো যাবে।</span></p>
+            </article>
+            <article class="flow-copy" data-flow-copy="lawyer">
+              <h3><span class="lang-en">Make trust visible through UI.</span><span class="lang-bn">বিশ্বাস তৈরি হবে তথ্য দেখিয়ে।</span></h3>
+              <p><span class="lang-en">LIN number, bar association, district, fee, expertise, and chat/video options should appear as product proof.</span><span class="lang-bn">LIN নম্বর, বার অ্যাসোসিয়েশন, জেলা, ফি, অভিজ্ঞতা ও চ্যাট/ভিডিও অপশনই হবে প্রোডাক্ট প্রমাণ।</span></p>
+            </article>
+            <article class="flow-copy" data-flow-copy="consult">
+              <h3><span class="lang-en">Show that consultation is an action.</span><span class="lang-bn">পরামর্শ নেওয়া যে সরাসরি সম্ভব, তা দেখান।</span></h3>
+              <p><span class="lang-en">The booking, slot, chat, video, and document states make Mokoddoma feel useful before launch.</span><span class="lang-bn">বুকিং, সময়, চ্যাট, ভিডিও ও ডকুমেন্ট শেয়ারিং মিলে অ্যাপটি ব্যবহারযোগ্য বলে মনে হবে।</span></p>
+            </article>
+            <article class="flow-copy" data-flow-copy="track">
+              <h3><span class="lang-en">Close the loop with case progress.</span><span class="lang-bn">মামলার অগ্রগতি দেখিয়ে ফ্লো সম্পূর্ণ করুন।</span></h3>
+              <p><span class="lang-en">The timeline connects case creation, lawyer assignment, consultation, and completion into one coherent promise.</span><span class="lang-bn">টাইমলাইন কেস তৈরি, আইনজীবী অ্যাসাইন, পরামর্শ ও শেষ আপডেটকে এক জায়গায় যুক্ত করবে।</span></p>
+            </article>
+          </div>
         </div>
       </section>
 
@@ -301,16 +481,17 @@
       <section class="case-cloud reveal" aria-labelledby="case-title">
         <p class="eyebrow"><span class="lang-en">Case types</span><span class="lang-bn">প্রথম পর্যায়ের বিষয়</span></p>
         <h2 id="case-title">
-          <span class="lang-en">Civil and criminal support first. More categories soon.</span>
-          <span class="lang-bn">শুরুতে দেওয়ানি ও ফৌজদারি বিষয়ে সহায়তা। অন্য ক্ষেত্রগুলো ধাপে ধাপে আসবে।</span>
+          <span class="lang-en">Start with the same legal categories people see in the app.</span>
+          <span class="lang-bn">অ্যাপে যে আইনগত বিভাগ থাকবে, ওয়েবসাইটেও সেই একই পথ দেখানো হচ্ছে।</span>
         </h2>
         <div class="case-chips" aria-label="Supported case categories">
           <span class="is-live"><span class="lang-en">Civil</span><span class="lang-bn">দেওয়ানি</span></span>
           <span class="is-live"><span class="lang-en">Criminal</span><span class="lang-bn">ফৌজদারি</span></span>
-          <span class="is-soon"><span class="lang-en">Family coming soon</span><span class="lang-bn">পারিবারিক বিষয় শিগগিরই আসছে</span></span>
-          <span class="is-soon"><span class="lang-en">Land coming soon</span><span class="lang-bn">জমি-সংক্রান্ত বিষয় শিগগিরই আসছে</span></span>
-          <span class="is-soon"><span class="lang-en">Cheque coming soon</span><span class="lang-bn">চেক-সংক্রান্ত বিষয় শিগগিরই আসছে</span></span>
-          <span class="is-soon"><span class="lang-en">Inheritance coming soon</span><span class="lang-bn">উত্তরাধিকার বিষয় শিগগিরই আসছে</span></span>
+          <span class="is-live"><span class="lang-en">Family</span><span class="lang-bn">পারিবারিক</span></span>
+          <span class="is-live"><span class="lang-en">Property disputes</span><span class="lang-bn">সম্পত্তি বিরোধ</span></span>
+          <span class="is-live"><span class="lang-en">Cheque dishonor</span><span class="lang-bn">চেক ডিজঅনার</span></span>
+          <span class="is-live"><span class="lang-en">Inheritance</span><span class="lang-bn">উত্তরাধিকার</span></span>
+          <span class="is-soon"><span class="lang-en">Other legal issues</span><span class="lang-bn">অন্যান্য আইনগত বিষয়</span></span>
         </div>
       </section>
 
